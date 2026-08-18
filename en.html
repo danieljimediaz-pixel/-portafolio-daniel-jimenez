@@ -3,39 +3,401 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="DJ Electrical LLC — electrical services, completed projects, and ongoing projects in Greenville, South Carolina and surrounding areas.">
-  <meta name="robots" content="index,follow">
-  <title>DJ Electrical LLC | Electrician in Greenville, SC</title>
-  <link rel="alternate" hreflang="es" href="https://-daniel-jimenez.onrender.com/">
-  <link rel="alternate" hreflang="en-us" href="https://-daniel-jimenez.onrender.com/en.html">
-  <link rel="alternate" hreflang="x-default" href="https://-daniel-jimenez.onrender.com/">
+
+  <meta name="description" content="DJ Electrical LLC - Electrical services in Greenville, South Carolina and surrounding areas.">
+
+  <title>DJ Electrical LLC | Electrical Services</title>
+
   <style>
-    *{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#06152d;color:#fff}
-    .top{height:72px;display:flex;justify-content:flex-end;align-items:center;padding:12px 22px;background:#081a35}
-    .lang{display:flex;gap:8px}.lang a{color:#fff;text-decoration:none;border:1px solid #ff7a18;border-radius:8px;padding:9px 13px;font-weight:700}
-    .lang a.active{background:#ff7a18}.hero{min-height:calc(100vh - 72px);padding:70px 8%;display:flex;align-items:center}
-    .content{max-width:900px}.eyebrow{color:#ff7a18;font-weight:800;letter-spacing:4px}
-    .h1{font-size:clamp(42px,7vw,78px);line-height:.98;font-weight:900;margin:20px 0}.orange{color:#ff7a18}
-    .lead{font-size:clamp(20px,3vw,30px);line-height:1.45;color:#f1f1f1}
-    .values{display:flex;gap:35px;flex-wrap:wrap;margin:35px 0;font-size:22px;font-weight:800}
-    .cta{display:inline-block;background:#ff7a18;color:#fff;text-decoration:none;padding:18px 28px;border-radius:10px;font-size:20px;font-weight:800}
-    .note{margin-top:25px;color:#b9c2d0;line-height:1.5}
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #06152d;
+    }
+
+    #portfolio {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+      background: #06152d;
+    }
+
+    #loading {
+      position: fixed;
+      z-index: 9999;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #06152d;
+      color: white;
+      font-family: Arial, sans-serif;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    #loading.hidden {
+      display: none;
+    }
   </style>
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Electrician","name":"DJ Electrical LLC","areaServed":["Greenville, SC"],"telephone":"+1-864-520-7971","url":"https://-daniel-jimenez.onrender.com/en.html","description":"Electrical services for commercial, industrial, and residential projects in Greenville, South Carolina and surrounding areas."}
-  </script>
 </head>
+
 <body>
-  <header class="top"><nav class="lang" aria-label="Language">
-    <a href="/">🇪🇸 Español</a><a class="active" href="/en.html">🇺🇸 English</a>
-  </nav></header>
-  <main class="hero"><section class="content">
-    <div class="eyebrow">DJ ELECTRICAL LLC</div>
-    <div class="h1">ELECTRICAL<br>EXCELLENCE<br>FOR A <span class="orange">MODERN</span><br><span class="orange">WORLD.</span></div>
-    <p class="lead">Electrical solutions for commercial, industrial, and residential projects, focused on quality, safety, and trust.</p>
-    <div class="values"><span>⚡ QUALITY</span><span>🛡️ SAFETY</span><span>⚙️ TRUST</span></div>
-    <a class="cta" href="tel:+18645207971">📞 CALL NOW · 864-520-7971</a>
-    <p class="note">Serving Greenville, South Carolina and surrounding areas.</p>
-  </section></main>
+
+  <div id="loading">
+    Loading DJ Electrical...
+  </div>
+
+  <!--
+    THIS LOADS YOUR ORIGINAL COMPLETE PORTFOLIO.
+    All images, logo, background and design remain intact.
+  -->
+  <iframe
+    id="portfolio"
+    src="DJ_Electrical_Portafolio_Actualizado.html"
+    title="DJ Electrical LLC">
+  </iframe>
+
+
+<script>
+
+  const iframe = document.getElementById("portfolio");
+  const loading = document.getElementById("loading");
+
+
+  /*
+  ============================================================
+  ENGLISH TRANSLATIONS
+  ============================================================
+  */
+
+  const translations = {
+
+    "Español": "Español",
+    "English": "English",
+
+    "LLAMAR AHORA": "CALL NOW",
+    "Llamar ahora": "Call now",
+    "LLAME AHORA": "CALL NOW",
+
+    "VER PROYECTOS": "VIEW PROJECTS",
+    "Ver proyectos": "View projects",
+
+    "EXCELENCIA ELÉCTRICA PARA UN MUNDO MODERNO.":
+      "ELECTRICAL EXCELLENCE FOR A MODERN WORLD.",
+
+    "Excelencia eléctrica para un mundo moderno.":
+      "Electrical excellence for a modern world.",
+
+    "Soluciones eléctricas para proyectos comerciales, industriales y residenciales, con enfoque en calidad, seguridad y confianza.":
+      "Electrical solutions for commercial, industrial, and residential projects, focused on quality, safety, and trust.",
+
+    "CALIDAD": "QUALITY",
+    "SEGURIDAD": "SAFETY",
+    "CONFIANZA": "TRUST",
+
+    "Calidad": "Quality",
+    "Seguridad": "Safety",
+    "Confianza": "Trust",
+
+    "PROYECTOS": "PROJECTS",
+    "Proyectos": "Projects",
+
+    "SERVICIOS": "SERVICES",
+    "Servicios": "Services",
+
+    "CONTACTO": "CONTACT",
+    "Contacto": "Contact",
+
+    "NOSOTROS": "ABOUT US",
+    "Nosotros": "About Us",
+
+    "SOBRE NOSOTROS": "ABOUT US",
+    "Sobre nosotros": "About Us",
+
+    "Acerca de nosotros": "About Us",
+    "Acerca de": "About",
+
+    "INICIO": "HOME",
+    "Inicio": "Home",
+
+    "Galería": "Gallery",
+    "GALERÍA": "GALLERY",
+
+    "Nuestros servicios": "Our Services",
+    "Nuestros proyectos": "Our Projects",
+
+    "Proyectos completados": "Completed Projects",
+    "Proyectos terminados": "Completed Projects",
+
+    "Proyectos en curso": "Ongoing Projects",
+
+    "Proyectos recientes": "Recent Projects",
+
+    "Proyectos destacados": "Featured Projects",
+
+    "Ver más": "View More",
+    "VER MÁS": "VIEW MORE",
+
+    "Leer más": "Read More",
+    "LEER MÁS": "READ MORE",
+
+    "Más información": "More Information",
+    "MÁS INFORMACIÓN": "MORE INFORMATION",
+
+    "Solicitar cotización": "Request a Quote",
+    "SOLICITAR COTIZACIÓN": "REQUEST A QUOTE",
+
+    "Cotización": "Quote",
+
+    "Contáctanos": "Contact Us",
+    "CONTACTANOS": "CONTACT US",
+
+    "Llámame": "Call Me",
+    "Llámanos": "Call Us",
+
+    "Nombre": "Name",
+    "NOMBRE": "NAME",
+
+    "Teléfono": "Phone",
+    "TELEFONO": "PHONE",
+
+    "Correo electrónico": "Email",
+    "CORREO ELECTRÓNICO": "EMAIL",
+
+    "Mensaje": "Message",
+    "MENSAJE": "MESSAGE",
+
+    "Enviar": "Send",
+    "ENVIAR": "SEND",
+
+    "Enviar mensaje": "Send Message",
+
+    "Área de servicio": "Service Area",
+    "Áreas de servicio": "Service Areas",
+
+    "Electricidad residencial": "Residential Electrical",
+    "Electricidad comercial": "Commercial Electrical",
+    "Electricidad industrial": "Industrial Electrical",
+
+    "Instalaciones eléctricas": "Electrical Installations",
+    "Trabajo eléctrico": "Electrical Work",
+
+    "Nuestros trabajos": "Our Work",
+
+    "En progreso": "In Progress",
+    "Completado": "Completed",
+
+    "Sirviendo Greenville, Carolina del Sur y áreas circundantes.":
+      "Serving Greenville, South Carolina and surrounding areas.",
+
+    "Greenville, Carolina del Sur":
+      "Greenville, South Carolina",
+
+    "áreas circundantes":
+      "surrounding areas"
+
+  };
+
+
+  /*
+  ============================================================
+  TRANSLATE TEXT
+  ============================================================
+  */
+
+  function translatePage() {
+
+    try {
+
+      const doc = iframe.contentDocument;
+
+      if (!doc || !doc.body) {
+        return;
+      }
+
+      /*
+        Change page language.
+      */
+      doc.documentElement.lang = "en";
+
+
+      /*
+        Change title.
+      */
+      doc.title =
+        "DJ Electrical LLC | Electrical Services in Greenville, SC";
+
+
+      /*
+        Translate visible text without touching images,
+        HTML structure or CSS.
+      */
+      const walker = doc.createTreeWalker(
+        doc.body,
+        NodeFilter.SHOW_TEXT
+      );
+
+      const nodes = [];
+
+      while (walker.nextNode()) {
+        nodes.push(walker.currentNode);
+      }
+
+
+      nodes.forEach(function(node) {
+
+        let text = node.nodeValue;
+
+        if (!text || !text.trim()) {
+          return;
+        }
+
+        Object.keys(translations).forEach(function(spanish) {
+
+          const english = translations[spanish];
+
+          text = text.split(spanish).join(english);
+
+        });
+
+        node.nodeValue = text;
+
+      });
+
+
+      /*
+      ========================================================
+      LANGUAGE BUTTONS
+      ========================================================
+      */
+
+      const links = doc.querySelectorAll("a");
+
+      links.forEach(function(link) {
+
+        const text =
+          (link.textContent || "")
+          .trim()
+          .toLowerCase();
+
+        const href =
+          link.getAttribute("href") || "";
+
+
+        /*
+          ENGLISH BUTTON
+
+          If we are already on English,
+          prevent it from opening en.html inside itself.
+        */
+        if (
+          text.includes("english") ||
+          href.toLowerCase().includes("en.html")
+        ) {
+
+          link.addEventListener("click", function(event) {
+
+            event.preventDefault();
+
+          });
+
+        }
+
+
+        /*
+          SPANISH BUTTON
+
+          Return to the normal Spanish page.
+        */
+        if (
+          text.includes("español")
+        ) {
+
+          link.setAttribute(
+            "href",
+            "index.html"
+          );
+
+          link.addEventListener("click", function(event) {
+
+            event.preventDefault();
+
+            window.top.location.href = "index.html";
+
+          });
+
+        }
+
+      });
+
+
+      /*
+        Hide loading screen.
+      */
+      loading.classList.add("hidden");
+
+    }
+
+    catch (error) {
+
+      console.log(
+        "Translation error:",
+        error
+      );
+
+    }
+
+  }
+
+
+  /*
+  ============================================================
+  WHEN THE COMPLETE PORTFOLIO LOADS
+  ============================================================
+  */
+
+  iframe.addEventListener(
+    "load",
+    function() {
+
+      /*
+        Give the original page a moment
+        to finish loading its images.
+      */
+      setTimeout(
+        translatePage,
+        500
+      );
+
+    }
+  );
+
+
+  /*
+  ============================================================
+  SAFETY FALLBACK
+  ============================================================
+  */
+
+  setTimeout(
+    function() {
+
+      loading.classList.add("hidden");
+
+    },
+    8000
+  );
+
+</script>
+
 </body>
 </html>
